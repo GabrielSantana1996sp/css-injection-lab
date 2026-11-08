@@ -1,0 +1,17 @@
+FROM node:18-slim
+
+# Cria o diretório de trabalho dentro do container
+WORKDIR /app
+
+# Instala dependências do sistema se necessário
+RUN apt-get update && apt-get install -y default-mysql-client && rm -rf /var/lib/apt/lists/*
+
+# Copia e instala as dependências do Node
+COPY package.json server.js ./
+RUN npm install mysql2
+
+# Expõe a porta do lab
+EXPOSE 3000
+
+# Comando para iniciar o servidor
+CMD ["node", "server.js"]

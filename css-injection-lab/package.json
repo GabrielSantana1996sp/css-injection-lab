@@ -1,0 +1,9 @@
+{
+  "name": "css-injection-lab",
+  "version": "1.0.0",
+  "description": "CSS Injection Exfiltration Lab",
+  "main": "server.js",
+  "dependencies": {
+    "mysql2": "^3.6.0"
+  }
+}

